@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 03:38:45 by jules             #+#    #+#             */
-/*   Updated: 2024/01/24 15:06:33 by jules            ###   ########.fr       */
+/*   Updated: 2024/01/25 06:39:58 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,9 @@ void	free_deque(t_deque d)
 	while (!is_empty(d))
 		free_node(pop(d));
 	free(d);
+}
+
+int		get_front_value(t_deque d)
+{
+	return (d->front->value);
 }

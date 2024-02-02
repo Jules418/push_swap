@@ -1,45 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 04:18:55 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 01:47:56 by jules            ###   ########.fr       */
+/*   Created: 2024/01/25 04:51:13 by jules             #+#    #+#             */
+/*   Updated: 2024/01/28 01:50:27 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef UTILS_H
+# define UTILS_H
 
-# include "deque.h"
 # include <stdlib.h>
+# include <limits.h>
 
-typedef struct s_ps
-{
-	t_deque	a;
-	t_deque	b;
-	int		*sorted_arr;
-	size_t	len;
-}	*t_ps;
-
-t_ps	new_ps(void);
-void	free_ps(t_ps p);
-
-void	sa(t_ps p);
-void	sb(t_ps p);
-void	ss(t_ps p);
-
-void	pa(t_ps p);
-void	pb(t_ps p);
-
-void	ra(t_ps p);
-void	rb(t_ps p);
-void	rr(t_ps p);
-
-void	rra(t_ps p);
-void	rrb(t_ps p);
-void	rrr(t_ps p);
+int		is_sorted(int arr[], size_t len);
+void	quick_sort(int arr[], size_t len);
+int		have_doublons(int arr[], size_t len);
+size_t	find_e(int arr[], size_t len, int e);
+size_t	ln2(size_t n);
+char	**ft_split(char *s, char sep);
+void	free_split(char **split_res);
+int		ft_atoi(char *n, int *err_code);
 
 #endif

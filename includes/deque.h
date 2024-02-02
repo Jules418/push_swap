@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 03:11:17 by jules             #+#    #+#             */
-/*   Updated: 2024/01/24 15:06:39 by jules            ###   ########.fr       */
+/*   Updated: 2024/01/25 06:55:24 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 typedef struct s_deque
 {
-	int		size;
+	size_t	size;
 	t_node	front;
 	t_node	back;
 }	*t_deque;
@@ -30,6 +30,8 @@ t_node	pop_back(t_deque d);
 void	push(t_deque d, t_node n);
 void	push_back(t_deque d, t_node n);
 void	free_deque(t_deque d);
+
+int		get_front_value(t_deque d);
 
 void	swap(t_deque d);
 void	rotate(t_deque d);

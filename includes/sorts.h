@@ -1,45 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   sorts.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/24 04:18:55 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 01:47:56 by jules            ###   ########.fr       */
+/*   Created: 2024/01/26 09:30:11 by jules             #+#    #+#             */
+/*   Updated: 2024/01/26 09:31:51 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#ifndef SORTS_H
+# define SORTS_H
 
-# include "deque.h"
-# include <stdlib.h>
+# include "push_swap.h"
+# include "utils.h"
 
-typedef struct s_ps
-{
-	t_deque	a;
-	t_deque	b;
-	int		*sorted_arr;
-	size_t	len;
-}	*t_ps;
-
-t_ps	new_ps(void);
-void	free_ps(t_ps p);
-
-void	sa(t_ps p);
-void	sb(t_ps p);
-void	ss(t_ps p);
-
-void	pa(t_ps p);
-void	pb(t_ps p);
-
-void	ra(t_ps p);
-void	rb(t_ps p);
-void	rr(t_ps p);
-
-void	rra(t_ps p);
-void	rrb(t_ps p);
-void	rrr(t_ps p);
+void	sort3(t_ps p);
+void	sort5(t_ps p);
+int	radix_sort(t_ps p);
 
 #endif
