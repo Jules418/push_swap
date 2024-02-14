@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:01:46 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 01:54:45 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/14 11:20:09 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "utils.h"
 #include "push_swap.h"
 #include "sorts.h"
+#include "input_manager.h"
 
 void	print_deque(t_deque d)
 {
@@ -53,23 +54,17 @@ int	is_deque_sorted(t_deque d)
 int	main(int argc, char **argv)
 {
 	t_ps	p;
-	t_node	n;
-	int		err;
 	int		nb_op;
 
 	if (argc == 1)
 		return (1);
-	p = new_ps();
-	err = 0;
-	for(int i = 1; i < argc; i++)
-	{
-		n = new_node(ft_atoi(argv[i], &err));
-		push_back(p->a, n);
-	}
+	p = initialize_ps(argc, argv);
+	if (!p)
+		return (EXIT_FAILURE);
 	nb_op = radix_sort(p);
 	//print_deque(p->a);
 	printf("nb_op : %d\n", nb_op);
 	printf("is_sorted : %d\n", is_deque_sorted(p->a));
 	free_ps(p);
-	return (0);
+	return (EXIT_SUCCESS);
 }

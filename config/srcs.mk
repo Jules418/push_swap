@@ -8,7 +8,8 @@ COMMON_SRCS = 	$(NODE_SRCS) \
 					$(DEQUE_SRCS) \
 					$(PS_SRCS) \
 					$(UTILS_SRCS) \
-					$(SORTS_SRCS)
+					$(SORTS_SRCS) \
+					$(INPUT_MANAGER_SRCS)
 
 NODE_SRCS = node/node.c
 
