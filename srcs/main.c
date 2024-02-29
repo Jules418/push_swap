@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:01:46 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 12:21:57 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 18:27:33 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,17 +54,25 @@ int	is_deque_sorted(t_deque d)
 int	main(int argc, char **argv)
 {
 	t_ps	p;
-	int		nb_op;
+	// int		nb_op;
 
 	if (argc == 1)
 		return (1);
 	p = initialize_ps(argc, argv);
 	if (!p)
+	{
+		write(2, "Error\n", 6);
 		return (EXIT_FAILURE);
-	nb_op = radix_sort(p);
+	}
+	
 	//print_deque(p->a);
-	printf("nb_op : %d\n", nb_op);
-	printf("is_sorted : %d\n", is_deque_sorted(p->a));
+	// printf("\nsorting:\n");
+	// nb_op = radix_sort(p);
+	if (!is_deque_sorted(p->a))
+		radix_sort(p);
+	// print_deque(p->a);
+	// printf("nb_op : %d\n", nb_op);
+	// printf("is_sorted : %d\n", is_deque_sorted(p->a));
 	free_ps(p);
 	return (EXIT_SUCCESS);
 }

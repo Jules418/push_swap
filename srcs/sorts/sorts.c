@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 09:30:10 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 02:48:23 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 18:27:17 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,15 +34,22 @@ void	radix_cycle(t_ps p, int mask, int *c)
 	while (i < len)
 	{
 		if (!(get_front_value(p->a) & mask))
+		{
 			pb(p);
+			write(1, "pb\n", 3);
+		}
 		else
+		{
 			ra(p);
+			write(1, "ra\n", 3);
+		}
 		i++;
 		(*c)++;
 	}
 	while (!is_empty(p->b))
 	{
 		pa(p);
+		write(1, "pa\n", 3);
 		(*c)++;
 	}
 }

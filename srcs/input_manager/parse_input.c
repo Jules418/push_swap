@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parse_input.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:16:29 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 12:22:35 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 17:14:25 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ int	*get_arr(char **s, size_t len)
 
 	if (!len || !s)
 		return (NULL);
+	err_code = 0;
 	arr = malloc(sizeof(int) * len);
 	i = 0;
 	if (!arr)

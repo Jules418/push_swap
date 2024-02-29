@@ -1,4 +1,4 @@
-#include "utils.c"
+#include "utils.h"
 
 int *ft_copy_arr(int *arr, size_t len)
 {

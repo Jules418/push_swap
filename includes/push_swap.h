@@ -6,15 +6,16 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:18:55 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 01:47:56 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 16:48:20 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "deque.h"
 # include <stdlib.h>
+# include <unistd.h>
+# include "deque.h"
 
 typedef struct s_ps
 {

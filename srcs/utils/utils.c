@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 04:54:20 by jules             #+#    #+#             */
-/*   Updated: 2024/01/28 01:50:46 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 17:13:35 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,8 @@ int	have_doublons(int arr[], size_t len)
 	size_t	i;
 
 	i = 0;
+	if (!arr || !len)
+		return (1);
 	while (i < len - 1)
 	{
 		if (arr[i] == arr[i + 1])
