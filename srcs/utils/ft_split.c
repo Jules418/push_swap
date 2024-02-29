@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:23:09 by jules             #+#    #+#             */
-/*   Updated: 2024/02/14 10:14:20 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 23:01:53 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,6 @@ size_t	len_split(char **split_res)
 	if (!split_res)
 		return (0);
 	i = 0;
-	
 	while (split_res[i])
 	{
 		i++;

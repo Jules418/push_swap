@@ -6,12 +6,11 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:16:29 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 17:14:25 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 23:00:11 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "input_manager.h"
-
 
 int	*get_arr(char **s, size_t len)
 {
@@ -34,7 +33,6 @@ int	*get_arr(char **s, size_t len)
 	if (err_code)
 		return (free(arr), NULL);
 	return (arr);
-	
 }
 
 void	fill_stack(t_deque a, int arr[], size_t len)
@@ -78,7 +76,7 @@ t_ps	init_unique_arg(char args[])
 t_ps	initialize_ps(int argc, char **argv)
 {
 	t_ps	p;
-	
+
 	if (argc == 1)
 		exit(EXIT_FAILURE);
 	if (argc == 2)

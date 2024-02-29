@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:18:55 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 16:48:20 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 23:22:51 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,19 +28,19 @@ typedef struct s_ps
 t_ps	new_ps(void);
 void	free_ps(t_ps p);
 
-void	sa(t_ps p);
-void	sb(t_ps p);
-void	ss(t_ps p);
+void	sa(t_ps p, int print);
+void	sb(t_ps p, int print);
+void	ss(t_ps p, int print);
 
-void	pa(t_ps p);
-void	pb(t_ps p);
+void	pa(t_ps p, int print);
+void	pb(t_ps p, int print);
 
-void	ra(t_ps p);
-void	rb(t_ps p);
-void	rr(t_ps p);
+void	ra(t_ps p, int print);
+void	rb(t_ps p, int print);
+void	rr(t_ps p, int print);
 
-void	rra(t_ps p);
-void	rrb(t_ps p);
-void	rrr(t_ps p);
+void	rra(t_ps p, int print);
+void	rrb(t_ps p, int print);
+void	rrr(t_ps p, int print);
 
 #endif

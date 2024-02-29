@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sorts.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 09:30:11 by jules             #+#    #+#             */
-/*   Updated: 2024/02/14 10:26:22 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 23:05:03 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@
 
 void	sort3(t_ps p);
 void	sort5(t_ps p);
-int		radix_sort(t_ps p);
+void	radix_sort(t_ps p);
 
 #endif

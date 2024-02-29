@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 04:54:20 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 17:13:35 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 23:04:02 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ size_t	find_e(int arr[], size_t len, int e)
 		return (find_e(arr, len / 2, e));
 	if (arr[mid] < e)
 		return (mid + find_e(arr + mid, len - mid, e));
-	return (mid);	
+	return (mid);
 }
 
 size_t	ln2(size_t n)
@@ -76,7 +76,7 @@ int	ft_atoi(char *s, int *err_code)
 	n = 0;
 	sign = 1;
 	i = 0;
-	if	(s[i] == '-')
+	if (s[i] == '-')
 	{
 		sign = -1;
 		i++;
@@ -86,11 +86,11 @@ int	ft_atoi(char *s, int *err_code)
 	while (s[i] && (('0' <= s[i]) && (s[i] <= '9')))
 	{
 		n = n * 10 + (s[i] - '0');
-		if (n > ((unsigned int) INT_MAX + 1*(sign == -1)))
-			break;
+		if (n > ((unsigned int) INT_MAX + 1 * (sign == -1)))
+			break ;
 		i++;
 	}
 	if (s[i])
 		*err_code = 1;
-	return (n*sign);
+	return (n * sign);
 }
