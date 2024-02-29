@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   node.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 03:14:47 by jules             #+#    #+#             */
-/*   Updated: 2024/01/24 15:08:37 by jules            ###   ########.fr       */
+/*   Updated: 2024/02/29 12:10:52 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ typedef struct s_node	*t_node;
 
 struct s_node
 {
-	int		value;
+	size_t	value;
 	t_node	prev;
 	t_node	next;
 };

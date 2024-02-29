@@ -6,7 +6,7 @@
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:01:46 by jules             #+#    #+#             */
-/*   Updated: 2024/02/14 11:20:09 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:21:57 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	print_deque(t_deque d)
 	current = d->front;
 	while (current)
 	{
-		printf("%d\n", current->value);
+		printf("%ld\n", current->value);
 		current = current->next;
 	}
 }
@@ -32,7 +32,7 @@ void	print_deque(t_deque d)
 int	is_deque_sorted(t_deque d)
 {
 	t_node	current;
-	int		last;
+	size_t	last;
 
 	if (!d)
 		return (0);

@@ -6,7 +6,7 @@
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 04:51:13 by jules             #+#    #+#             */
-/*   Updated: 2024/02/14 10:15:02 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:13:14 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,6 @@ char	**ft_split(char *s, char sep);
 void	free_split(char **split_res);
 size_t	len_split(char **split_res);
 int		ft_atoi(char *n, int *err_code);
+int		*ft_copy_arr(int *arr, size_t len);
 
 #endif

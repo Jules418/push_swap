@@ -6,7 +6,7 @@
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:16:29 by jules             #+#    #+#             */
-/*   Updated: 2024/02/14 11:21:35 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/02/29 12:22:35 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,15 +39,19 @@ int	*get_arr(char **s, size_t len)
 void	fill_stack(t_deque a, int arr[], size_t len)
 {
 	size_t	i;
+	int		*cpy;
 
 	i = 0;
-	if (!arr)
+	cpy = ft_copy_arr(arr, len);
+	if (!arr || !cpy)
 		return ;
+	quick_sort(arr, len);
 	while (i < len)
 	{
-		push_back(a, new_node(arr[i]));
+		push_back(a, new_node(find_e(arr, len, cpy[i])));
 		i++;
 	}
+	free(cpy);
 }
 
 t_ps	init_unique_arg(char args[])
@@ -64,21 +68,18 @@ t_ps	init_unique_arg(char args[])
 	p->sorted_arr = get_arr(split_arg, len);
 	p->len = len * (p->sorted_arr != NULL);
 	fill_stack(p->a, p->sorted_arr, p->len);
-	if (p->a->size != p->len)
-		return (free_split(split_arg), free_ps(p), NULL);
-	quick_sort(p->sorted_arr, p->len);
 	free_split(split_arg);
+	if ((p->a->size != p->len) || (have_doublons(p->sorted_arr, p->len)))
+		return (free_ps(p), NULL);
 	return (p);
 }
 
 t_ps	initialize_ps(int argc, char **argv)
 {
 	t_ps	p;
-	char	**args;
 	
 	if (argc == 1)
 		exit(EXIT_FAILURE);
-	args = NULL;
 	if (argc == 2)
 		return (init_unique_arg(argv[1]));
 	p = new_ps();
@@ -87,8 +88,7 @@ t_ps	initialize_ps(int argc, char **argv)
 	p->sorted_arr = get_arr(argv + 1, argc - 1);
 	p->len = (argc - 1) * (p->sorted_arr != NULL);
 	fill_stack(p->a, p->sorted_arr, p->len);
-	if (p->a->size != p->len)
+	if ((p->a->size != p->len) || (have_doublons(p->sorted_arr, p->len)))
 		return (free_ps(p), NULL);
-	quick_sort(p->sorted_arr, p->len);
 	return (p);
 }

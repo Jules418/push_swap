@@ -24,7 +24,8 @@ PS_SRCS = push_swap_operations/ps_manage.c \
 
 UTILS_SRCS = utils/utils.c \
 				utils/quick_sort.c \
-				utils/ft_split.c
+				utils/ft_split.c \
+				utils/ft_copy_arr.c
 
 INPUT_MANAGER_SRCS = input_manager/parse_input.c
 
