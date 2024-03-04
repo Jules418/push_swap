@@ -1,28 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorts.c                                            :+:      :+:    :+:   */
+/*   radix.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 09:30:10 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 23:26:33 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/04 13:38:52 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "sorts.h"
-
-void	sort3(t_ps p)
-{
-	(void) p;
-	return ;
-}
-
-void	sort5(t_ps p)
-{
-	(void) p;
-	return ;
-}
 
 void	radix_cycle(t_ps p, int mask)
 {

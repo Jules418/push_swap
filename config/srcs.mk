@@ -29,4 +29,7 @@ UTILS_SRCS = utils/utils.c \
 
 INPUT_MANAGER_SRCS = input_manager/parse_input.c
 
-SORTS_SRCS = sorts/sorts.c
+SORTS_SRCS = sorts/radix.c \
+				sorts/sort5.c \
+				sorts/sort4.c \
+				sorts/sort3.c

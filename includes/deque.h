@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   deque.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 03:11:17 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 22:59:34 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/04 13:59:10 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ void	free_deque(t_deque d);
 
 int		get_front_value(t_deque d);
 int		is_deque_sorted(t_deque d);
+int		cmp_to_motif_dq(t_deque d, char *mot);
 
 void	swap(t_deque d);
 void	rotate(t_deque d);

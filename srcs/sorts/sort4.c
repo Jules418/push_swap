@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sorts.h                                            :+:      :+:    :+:   */
+/*   sort4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/01/26 09:30:11 by jules             #+#    #+#             */
-/*   Updated: 2024/03/04 17:06:55 by jbanacze         ###   ########.fr       */
+/*   Created: 2024/03/04 17:04:08 by jbanacze          #+#    #+#             */
+/*   Updated: 2024/03/04 17:31:38 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SORTS_H
-# define SORTS_H
+#include "sorts.h"
 
-# include "push_swap.h"
-# include "utils.h"
-
-void	sort3(t_ps p);
-void	sort4(t_ps p);
-void	sort5(t_ps p);
-void	radix_sort(t_ps p);
-
-#endif
+void	sort4(t_ps p)
+{
+	if (cmp_to_motif_dq(p->a, "xxx3"))
+		rra(p, 1);
+	if (cmp_to_motif_dq(p->a, "xx3x"))
+		ra(p, 1);
+	if (cmp_to_motif_dq(p->a, "x3xx"))
+		sa(p, 1);
+	if (cmp_to_motif_dq(p->a, "3xxx"))
+	{
+		pb(p, 1);
+		sort3(p);
+		pa(p, 1);
+		ra(p, 1);
+	}
+}

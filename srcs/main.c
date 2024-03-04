@@ -6,7 +6,7 @@
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:01:46 by jules             #+#    #+#             */
-/*   Updated: 2024/03/04 13:15:39 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/03/04 17:03:55 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	main(int argc, char **argv)
 			sa(p, 1);
 		else if (p->len == 3)
 			sort3(p);
+		else if (p->len == 4)
+			sort4(p);
 		else if (p->len == 5)
 			sort5(p);
 		else
