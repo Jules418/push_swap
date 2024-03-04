@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:23:09 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 23:01:53 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/04 13:21:34 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ size_t	copy_until(char *src, char **dest, char sep, int *err_code)
 	size_t	len_to_cpy;
 
 	len_to_cpy = 0;
-	while (src[len_to_cpy] != sep)
+	while (src[len_to_cpy] && (src[len_to_cpy] != sep))
 		len_to_cpy++;
 	if (len_to_cpy == 0)
 		return (0);
@@ -93,6 +93,7 @@ char	**ft_split(char *s, char sep)
 		if (split_res[index_tab])
 			index_tab++;
 	}
+	split_res[index_tab] = NULL;
 	return (split_res);
 }
 
@@ -104,8 +105,6 @@ size_t	len_split(char **split_res)
 		return (0);
 	i = 0;
 	while (split_res[i])
-	{
 		i++;
-	}
 	return (i);
 }
