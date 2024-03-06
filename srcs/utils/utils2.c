@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
+/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 23:00:28 by jules             #+#    #+#             */
-/*   Updated: 2024/03/04 21:43:57 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/06 17:59:01 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,3 @@ int	*ft_copy_arr(int *arr, size_t len)
 		cpy[i] = arr[i];
 	return (cpy);
 }
-
