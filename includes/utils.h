@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 04:51:13 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 12:13:14 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/03/07 00:38:44 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int		is_sorted(int arr[], size_t len);
 void	quick_sort(int arr[], size_t len);
-int		have_doublons(int arr[], size_t len);
+int		have_duplicates(int arr[], size_t len);
 size_t	find_e(int arr[], size_t len, int e);
 size_t	ln2(size_t n);
 char	**ft_split(char *s, char sep);

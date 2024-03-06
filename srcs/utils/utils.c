@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 04:54:20 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 23:04:02 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/07 00:39:57 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	is_sorted(int arr[], size_t len)
 	return (1);
 }
 
-int	have_doublons(int arr[], size_t len)
+int	have_duplicates(int arr[], size_t len)
 {
 	size_t	i;
 

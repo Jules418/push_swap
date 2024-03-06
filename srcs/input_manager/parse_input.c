@@ -6,7 +6,7 @@
 /*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 06:16:29 by jules             #+#    #+#             */
-/*   Updated: 2024/02/29 23:00:11 by jules            ###   ########.fr       */
+/*   Updated: 2024/03/07 00:38:51 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ t_ps	init_unique_arg(char args[])
 	p->len = len * (p->sorted_arr != NULL);
 	fill_stack(p->a, p->sorted_arr, p->len);
 	free_split(split_arg);
-	if ((p->a->size != p->len) || (have_doublons(p->sorted_arr, p->len)))
+	if ((p->a->size != p->len) || (have_duplicates(p->sorted_arr, p->len)))
 		return (free_ps(p), NULL);
 	return (p);
 }
@@ -87,7 +87,7 @@ t_ps	initialize_ps(int argc, char **argv)
 	p->sorted_arr = get_arr(argv + 1, argc - 1);
 	p->len = (argc - 1) * (p->sorted_arr != NULL);
 	fill_stack(p->a, p->sorted_arr, p->len);
-	if ((p->a->size != p->len) || (have_doublons(p->sorted_arr, p->len)))
+	if ((p->a->size != p->len) || (have_duplicates(p->sorted_arr, p->len)))
 		return (free_ps(p), NULL);
 	return (p);
 }

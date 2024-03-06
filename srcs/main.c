@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jules <jules@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 04:01:46 by jules             #+#    #+#             */
-/*   Updated: 2024/03/04 17:03:55 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/03/07 00:35:37 by jules            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "utils.h"
 #include "push_swap.h"
 #include "sorts.h"
