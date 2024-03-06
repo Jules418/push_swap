@@ -6,7 +6,7 @@
 /*   By: jbanacze <jbanacze@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:37:10 by jbanacze          #+#    #+#             */
-/*   Updated: 2024/03/06 17:27:15 by jbanacze         ###   ########.fr       */
+/*   Updated: 2024/03/06 17:53:11 by jbanacze         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	cmp_to_motif_dq(t_deque d, char *mot)
 {
 	if (!d || !mot)
 		return (0);
-	return cmp_to_motif(d->front, mot);
+	return (cmp_to_motif(d->front, mot));
 }
 
 size_t	max_pos(t_deque d)
